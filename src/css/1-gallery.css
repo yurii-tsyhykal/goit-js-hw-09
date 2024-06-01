@@ -16,6 +16,11 @@
   line-height: 0;
 }
 
+.gallery-item:hover {
+  transform: scale(1.04);
+  transition: transform 250ms linear;
+}
+
 .gallery-image {
   display: block;
   height: 100%;
@@ -35,3 +40,5 @@
 .sl-wrapper {
   background-color: rgba(46, 47, 66, 0.8);
 }
+
+/* ========================================================== */
