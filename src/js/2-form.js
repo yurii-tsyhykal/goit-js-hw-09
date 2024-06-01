@@ -17,8 +17,8 @@ refs.form.addEventListener('input', onUserInput);
 refs.form.addEventListener('submit', onUserSubmit);
 
 function onUserInput(e) {
-  const emailInput = e.currentTarget.elements.email.value;
-  const messageInput = e.currentTarget.elements.message.value;
+  const emailInput = e.currentTarget.elements.email.value.trim();
+  const messageInput = e.currentTarget.elements.message.value.trim();
   formData.email = emailInput;
   formData.message = messageInput;
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
