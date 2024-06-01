@@ -9,6 +9,8 @@ const refs = {
 
 const parseLSData = JSON.parse(localStorage.getItem('feedback-form-state'));
 if (parseLSData) {
+  formData.email = parseLSData.email;
+  formData.message = parseLSData.message;
   refs.form.elements.email.value = parseLSData.email ?? '';
   refs.form.elements.message.value = parseLSData.message ?? '';
 }
@@ -32,6 +34,8 @@ function onUserSubmit(e) {
     return alert(`Fill please all fields`);
   }
   console.log(formData);
+  formData.email = '';
+  formData.message = '';
   localStorage.removeItem('feedback-form-state');
   refs.form.reset();
 }
